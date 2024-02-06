@@ -1,0 +1,7 @@
+C:\Users\prajv\Desktop\Term 2\C#\Question_2\bin\Debug\Question_2.exe.config
+C:\Users\prajv\Desktop\Term 2\C#\Question_2\bin\Debug\Question_2.exe
+C:\Users\prajv\Desktop\Term 2\C#\Question_2\bin\Debug\Question_2.pdb
+C:\Users\prajv\Desktop\Term 2\C#\Question_2\obj\Debug\Question_2.csproj.AssemblyReference.cache
+C:\Users\prajv\Desktop\Term 2\C#\Question_2\obj\Debug\Question_2.csproj.CoreCompileInputs.cache
+C:\Users\prajv\Desktop\Term 2\C#\Question_2\obj\Debug\Question_2.exe
+C:\Users\prajv\Desktop\Term 2\C#\Question_2\obj\Debug\Question_2.pdb
