@@ -41,6 +41,7 @@ namespace Solution_1
                     string input = Console.ReadLine();
                     bool isDouble = double.TryParse(input, out dentalEquipmentCompany.MonthSale[i]);
 
+                    //validating double input
                     if (isDouble)
                     {
                         if (dentalEquipmentCompany.MonthSale[i] < -1)
@@ -49,10 +50,12 @@ namespace Solution_1
                         }
                         else if (dentalEquipmentCompany.MonthSale[i] == -1)
                         {
+                            //if enters -1, request to exit program is set to true
                             isValidInput = exitRequest = true;                            
                         }
                         else
                         {
+                            //valid input to proceed
                             isValidInput = true;
                         }
 
@@ -64,6 +67,7 @@ namespace Solution_1
                 }
                 isValidInput = false;
 
+                //check if user entered -1 to exit
                 if (exitRequest)
                 {
                     Console.WriteLine("Goodbye!");
