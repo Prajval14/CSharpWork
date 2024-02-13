@@ -20,6 +20,7 @@ namespace Solution_1
             dentalEquipmentCompany.TotalEarnings = 0;
             string[] monthsList = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
             int i = 0;
+            bool isValidInput = false;
             bool exitRequest = false;
 
             Console.WriteLine("Dental Equipment Company\n------------------------------------------");
@@ -35,12 +36,12 @@ namespace Solution_1
                 Console.WriteLine($"Enter your gross sales amount for the month of {monthsList[i]} or enter '-1' to exit.");
 
                 //validating user input
-                while (true)
+                while (!isValidInput)
                 {
                     string input = Console.ReadLine();
-                    bool isValidInput = double.TryParse(input, out dentalEquipmentCompany.MonthSale[i]);
+                    bool isDouble = double.TryParse(input, out dentalEquipmentCompany.MonthSale[i]);
 
-                    if (isValidInput)
+                    if (isDouble)
                     {
                         if (dentalEquipmentCompany.MonthSale[i] < -1)
                         {
@@ -48,12 +49,11 @@ namespace Solution_1
                         }
                         else if (dentalEquipmentCompany.MonthSale[i] == -1)
                         {
-                            exitRequest = true;
-                            break;
+                            isValidInput = exitRequest = true;                            
                         }
                         else
                         {
-                            break;
+                            isValidInput = true;
                         }
 
                     }
@@ -62,6 +62,7 @@ namespace Solution_1
                         Console.WriteLine("Invalid input. Please enter a valid double amount.");
                     }
                 }
+                isValidInput = false;
 
                 if (exitRequest)
                 {
