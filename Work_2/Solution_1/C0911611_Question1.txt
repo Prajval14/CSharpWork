@@ -1,0 +1,30 @@
+1. Automatic Garbage Collection
+-> Garbage collection in C# within the .NET Framework provides automatic memory management, 
+allows the developers to automate memory allocation and deallocation tasks. The process involves 
+periodic scanning of memory to identify and release objects that are no longer in use, thus preventing 
+memory leaks. It operates with minimal impact on application performance, utilizing a generation-based 
+approach where objects are initially allocated in a young generation and moved to older generations as needed. 
+The garbage collector also supports finalization for cleanup tasks. Through phases such as marking, relocating, 
+and compacting, it efficiently manages memory, organizing it into three generations based on object lifetimes. 
+Methods provided by the GC class allow for insights into memory management, such as determining generation 
+numbers and triggering garbage collection when necessary. Overall, garbage collection streamlines memory 
+management in C# applications, enhancing efficiency and safety without the need for manual intervention.
+Reference - https://www.geeksforgeeks.org/garbage-collection-in-c-sharp-dot-net-framework/
+
+2. Conditional Compilation
+-> Conditional compilation in C# allows developers to selectively compile specific blocks of code based on 
+predefined conditions. This feature is useful for tasks like debugging or creating language-specific versions 
+of an application. Using directives like #If...Then...#Else, developers can include or exclude code blocks during 
+compile time. For instance, different language versions of an application can be created from the same source code 
+by embedding platform-specific code segments. Conditional compilation constants can be set in the Project Designer, 
+command-line compiler, or within the code itself, each with its own scope.
+Reference - https://learn.microsoft.com/en-us/dotnet/visual-basic/programming-guide/program-structure/conditional-compilation
+
+3. Simple Multithreading
+-> Multithreading in C# allows for the concurrent execution of multiple tasks, enhancing efficiency and resource 
+utilization within applications. By leveraging threads, developers can execute different parts of their code 
+concurrently, enabling tasks to run simultaneously rather than sequentially. This approach not only maximizes 
+CPU utilization but also facilitates time-sharing between processes, improving overall system performance. 
+Multithreading empowers developers to create more responsive and scalable applications, ultimately enhancing 
+user experience and efficiency.
+Reference - https://www.geeksforgeeks.org/c-sharp-multithreading/

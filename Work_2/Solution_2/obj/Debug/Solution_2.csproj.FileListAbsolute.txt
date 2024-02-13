@@ -1,0 +1,7 @@
+C:\Users\prajv\Desktop\Sourcecode\C#\Work_2\Solution_2\bin\Debug\Solution_2.exe.config
+C:\Users\prajv\Desktop\Sourcecode\C#\Work_2\Solution_2\bin\Debug\Solution_2.exe
+C:\Users\prajv\Desktop\Sourcecode\C#\Work_2\Solution_2\bin\Debug\Solution_2.pdb
+C:\Users\prajv\Desktop\Sourcecode\C#\Work_2\Solution_2\obj\Debug\Solution_2.csproj.AssemblyReference.cache
+C:\Users\prajv\Desktop\Sourcecode\C#\Work_2\Solution_2\obj\Debug\Solution_2.csproj.CoreCompileInputs.cache
+C:\Users\prajv\Desktop\Sourcecode\C#\Work_2\Solution_2\obj\Debug\Solution_2.exe
+C:\Users\prajv\Desktop\Sourcecode\C#\Work_2\Solution_2\obj\Debug\Solution_2.pdb
