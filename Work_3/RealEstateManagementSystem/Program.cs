@@ -1,42 +1,151 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RealEstateManagementSystem
 {
     public class Program
     {
+        public static int Menu()
+        {
+            int option;      
+            
+            do
+            {
+                Console.WriteLine("Enter 1: To add a House\nEnter 2: To add an apartment\nEnter 3: To quit\nEnter your choice: ");
+                string input = Console.ReadLine();
+                if(!int.TryParse(input, out option) || (option < 1 || option > 3))
+                {                    
+                    Console.WriteLine("Please select valid option");
+                }         
+                else
+                {
+                    break;
+                }
+            }   
+            while (true);
+
+            return option;
+        }
+
         public static void Main(string[] args)
         {
-            //Prompting the user to enter the requested details
-            Console.WriteLine("Enter the street name: ");
-            string street = Console.ReadLine();
-            Console.WriteLine("Enter the municipality name: ");
-            string municipality = Console.ReadLine();
-            Console.WriteLine("Enter the region name: ");
-            string region = Console.ReadLine();
-            Console.WriteLine("Enter the postal code: ");
-            string postal_code = Console.ReadLine();
+            List<House> houses = new List<House>();
+            List<Condo> apartments = new List<Condo>();
+            int choice;
 
-            //Creating an instance of the address class 
-            Address stringAddress = new Address(street, municipality, region, postal_code);
+            do
+            {
+                choice = Menu();
 
-            //Displaying the address object's information using PrintAddress method
-            stringAddress.PrintAddress();
+                if(choice == 1)
+                {
+                    int garage;
+                    int type;
+                    int condition;
 
-            //Prompting the user to enter the requested details
-            Console.WriteLine("Enter the price: ");
-            float price = float.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the square foot: ");
-            float square_feet = float.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the year built: ");
-            int year_built = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the address: ");
-            string address = Console.ReadLine();
+                    do
+                    {
+                        Console.WriteLine("Please enter number of garage: ");
+                        string garage_input = Console.ReadLine();
+                        Console.WriteLine("Please enter type of house(1. Detached 2. Non-Detached): ");
+                        string type_input = Console.ReadLine();
+                        Console.WriteLine("Please enter condition of house(1. Sale 2. Rent): ");
+                        string condition_input = Console.ReadLine();
 
-            //Creating an instance of the residence class 
-            Residence stringResidence = new Residence(price, square_feet, year_built, address);
+                        if (!int.TryParse(garage_input, out garage))
+                        {
+                            Console.WriteLine("Please enter valid garage details");
+                        }
+                        else if(!int.TryParse(type_input, out type) || (type != 1 && type != 2))
+                        {
+                            Console.WriteLine("Please enter valid house details");
+                        }
+                        else if(!int.TryParse(condition_input, out condition) || (condition != 1 && condition != 2))
+                        {
+                            Console.WriteLine("Please enter valid condition details");
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    } 
+                    while (true);                    
 
-            //Displaying the residence object's information using PrintResidence method
-            stringResidence.PrintResidence();
+                    House house = new House();
+                    house.Garage = garage;
+                    house.Type = type == 1 ? true : false;
+                    house.Condition = condition == 1 ? true : false;
+
+                    houses.Add(house);
+                }
+                else if(choice == 2)
+                {
+                    int unit;
+                    int floor;
+                    int parking;
+                    
+                    do
+                    {
+                        Console.WriteLine("Please enter unit number: ");
+                        string unit_input = Console.ReadLine();
+                        Console.WriteLine("Please enter floor number: ");
+                        string floor_input = Console.ReadLine();
+                        Console.WriteLine("Please enter the number of parking: ");
+                        string parking_input = Console.ReadLine();
+
+                        if (!int.TryParse(unit_input, out unit))
+                        {
+                            Console.WriteLine("Please enter valid unit number");
+                        }
+                        else if (!int.TryParse(floor_input, out floor))
+                        {
+                            Console.WriteLine("Please enter valid floor number");
+                        }
+                        else if (!int.TryParse(parking_input, out parking))
+                        {
+                            Console.WriteLine("Please enter valid parking details");
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    while (true);
+
+                    Condo condo = new Condo();
+                    condo.Unit = unit;
+                    condo.Floor = floor;
+                    condo.Parking = parking;    
+
+                    apartments.Add(condo);
+
+                }
+                else if(choice == 3)
+                {
+                    Console.WriteLine("Thank you!");
+                }
+                else
+                {
+                    break;
+                }
+            }
+            while (choice != 3);
+
+            float total_house_commission = 0;
+            float total_apartments_commission = 0;
+
+            foreach(House house in houses)
+            {
+                total_house_commission += house.CalculateCommission();             
+            }
+
+            foreach (Condo condo in apartments)
+            {
+                total_apartments_commission += condo.CalculateCommission();
+            }
+
+            Console.WriteLine($"Total commission for {houses.Count} houses would be {total_house_commission}%.");
+            Console.WriteLine($"Total commission for {apartments.Count} apartments would be {total_apartments_commission}%.");
 
             Console.ReadLine();
         }

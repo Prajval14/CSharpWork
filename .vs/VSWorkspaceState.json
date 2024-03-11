@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Work_1\\Question_1",
-    "\\Work_2",
-    "\\Work_2\\Question_1"
+    "\\Work_3",
+    "\\Work_3\\RealEstateManagementSystem"
   ],
-  "SelectedNode": "\\Work_2\\Question_1\\Question_2.csproj",
+  "SelectedNode": "\\Work_3\\RealEstateManagementSystem\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

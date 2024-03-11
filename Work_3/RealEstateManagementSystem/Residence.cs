@@ -3,7 +3,7 @@
 namespace RealEstateManagementSystem
 {
     //Residence class created
-    public class Residence
+    abstract class Residence
     {
         //Declaring the properties(attributes) with appropriate data types
         public float Price;
@@ -30,8 +30,8 @@ namespace RealEstateManagementSystem
             Address = address;
         }
 
-        //A method that returns the commission amount
-        public float CalculateCommission()
+        //A method that returns the commission amount and is set to virtual to allow overriding
+        public virtual float CalculateCommission()
         {
             commissionAmount = 2.8F;
             return commissionAmount;
