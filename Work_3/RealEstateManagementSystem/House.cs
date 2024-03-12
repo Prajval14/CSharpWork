@@ -2,6 +2,7 @@
 
 namespace RealEstateManagementSystem
 {
+    //Creating a class named "House" which is a subclass of Residence
     class House : Residence
     {
         //Declaring the properties(attributes) with appropriate data types

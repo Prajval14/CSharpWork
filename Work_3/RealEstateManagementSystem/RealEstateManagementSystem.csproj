@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
-    <Compile Include="Condo.cs" />
+    <Compile Include="Apartment.cs" />
     <Compile Include="House.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

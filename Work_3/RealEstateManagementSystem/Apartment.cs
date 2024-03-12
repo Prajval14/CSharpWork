@@ -2,7 +2,8 @@
 
 namespace RealEstateManagementSystem
 {
-    class Condo : Residence
+    //Creating a class named "Condo" which is a subclass of Residence
+    class Apartment : Residence
     {
         //Declaring the properties(attributes) with appropriate data types
         public int Unit;
@@ -11,7 +12,7 @@ namespace RealEstateManagementSystem
         public float condoCommission;
 
         //A no-arg constructor that creates a default condo
-        public Condo()
+        public Apartment()
         {
             Unit = 1;
             Floor = 0;
@@ -19,7 +20,7 @@ namespace RealEstateManagementSystem
         }
 
         //A constructor that creates a condo with the specified unit, price and parking
-        public Condo(int unit, int floor, int parking)
+        public Apartment(int unit, int floor, int parking)
         {
             Unit = unit;
             Floor = floor;
