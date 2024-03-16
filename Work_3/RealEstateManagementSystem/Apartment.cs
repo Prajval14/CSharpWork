@@ -2,7 +2,7 @@
 
 namespace RealEstateManagementSystem
 {
-    //Creating a class named "Condo" which is a subclass of Residence
+    //Creating a class named "Apartment" which is a subclass of Residence
     class Apartment : Residence
     {
         //Declaring the properties(attributes) with appropriate data types
@@ -11,7 +11,7 @@ namespace RealEstateManagementSystem
         public int Parking;
         public float condoCommission;
 
-        //A no-arg constructor that creates a default condo
+        //A no-arg constructor that creates a default apt
         public Apartment()
         {
             Unit = 1;
@@ -19,7 +19,7 @@ namespace RealEstateManagementSystem
             Parking = 1;
         }
 
-        //A constructor that creates a condo with the specified unit, price and parking
+        //A constructor that creates a apt with the specified unit, price and parking
         public Apartment(int unit, int floor, int parking)
         {
             Unit = unit;
@@ -35,7 +35,7 @@ namespace RealEstateManagementSystem
         }
 
         //A method to print out all available information about the current object
-        public void PrintCondo()
+        public void PrintApartment()
         {
             Console.WriteLine($"Unit: {Unit}\nFloor: {Floor}\nParking: {Parking}");
         }
